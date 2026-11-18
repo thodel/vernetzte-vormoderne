@@ -175,13 +175,23 @@ def ask(pack: dict) -> dict:
         return json.loads(p.read_text())
     if not base:
         raise RuntimeError("no model endpoint (VV_LLM_BASE_URL)")
-    body = json.dumps({"model": model, "temperature": 0, "max_tokens": 2000,
-                       "response_format": {"type": "json_object"},
-                       "messages": [{"role": "system", "content": PROMPT}, {"role": "user", "content": text}]})
-    req = urllib.request.Request(f"{base}/chat/completions", data=body.encode(),
-                                 headers={"Content-Type": "application/json", "Authorization": f"Bearer {key}"})
-    with slot(), urllib.request.urlopen(req, timeout=300) as r:
-        ans = json.loads(json.loads(r.read())["choices"][0]["message"]["content"])
+    ans = None
+    for budget in (4096, 8192):  # gpt-oss reasons first: a short budget ends before the answer (content None)
+        body = json.dumps({"model": model, "temperature": 0, "max_tokens": budget,
+                           "response_format": {"type": "json_object"},
+                           "messages": [{"role": "system", "content": PROMPT}, {"role": "user", "content": text}]})
+        req = urllib.request.Request(f"{base}/chat/completions", data=body.encode(),
+                                     headers={"Content-Type": "application/json", "Authorization": f"Bearer {key}"})
+        with slot(), urllib.request.urlopen(req, timeout=300) as r:
+            content = json.loads(r.read())["choices"][0]["message"].get("content")
+        try:
+            ans = json.loads(content or "")
+            if isinstance(ans, dict) and isinstance(ans.get("bio"), str):
+                break
+        except ValueError:
+            ans = None
+    if not isinstance(ans, dict) or not isinstance(ans.get("bio"), str):
+        raise ValueError("no usable answer")
     ans["model"] = model
     p.parent.mkdir(parents=True, exist_ok=True)
     p.write_text(json.dumps(ans, ensure_ascii=False))
