@@ -1,0 +1,54 @@
+# Quellen, je an einen Commit (bzw. eine Zenodo-Version) gebunden. `make fetch` lädt genau diese
+# Stände nach data/raw/<quelle>/; ein neuer Stand ist ein bewusster Commit dieser Datei.
+
+[ssrq]
+title = "Sammlung Schweizerischer Rechtsquellen (Druckbände, neu gelesen)"
+short = "SSRQ"
+repo = "thodel/ssrq_print_pages"
+commit = "fc9efddb7b493b07b1e57f446fb11a50f6bf436e"
+site = "https://thodel.github.io/ssrq_print_pages/"
+license = "Register und Verknüpfungen: siehe ssrq_print; Editionstexte SSRQ CC BY-NC-SA 4.0"
+# Personen und Orte des Superregisters, Orte mit Koordinaten, Stücke mit Jahr
+files = ["r/data/persons-*.json", "r/data/places-*.json", "k/places.json", "s/documents.json"]
+
+[kf]
+title = "Die Urkunden und Akten des Klosters und des Oberamts Königsfelden 1308–1662"
+short = "Königsfelden"
+zenodo = "10950031"
+version = "v2024-04-09"
+doi = "10.5281/zenodo.10950031"
+zip = "Staatsarchiv-Aargau/koenigsfelden-data-v2024-04-09.zip"
+site = "https://koenigsfelden.sources-online.org/"
+license = "CC BY 4.0"
+
+[sg]
+title = "Briefverkehr der Stadt St. Gallen 1400–1650 (Missiven)"
+short = "SG Missiven"
+repo = "dhbern/sg-missiven-data"
+commit = "53599e7caa9ec41adfc3ab3699811fc7376154de"
+site = "https://dhbern.github.io/sg-missiven-data/"
+license = "Register CC BY-NC 4.0 (Stadtarchiv St. Gallen); Repo CC BY-SA 4.0"
+files = ["person/person.xml", "place/place.xml"]
+
+[thun]
+title = "Thuner Missiven (Burgerarchiv Thun), maschinell gelesen und registriert"
+short = "Thun Missiven"
+repo = "dhbern/thun-missiven-data"
+commit = "f743dd30708c47887c599965959e8ed3a3e3742a"
+site = "https://dhbern.github.io/thun-missiven-data/"
+license = "CC BY-SA 4.0; Register automatisch erzeugt, ungeprüft"
+files = ["registers/persons.json", "registers/places.json"]
+
+[bullinger]
+title = "Bullinger Digital: Briefwechsel Heinrich Bullingers 1523–1575"
+short = "Bullinger"
+repo = "bullinger-digital/bullinger-korpus-tei"
+commit = "cc94710da3efa42f0c3e93121e2e8682c221e2be"
+site = "https://www.bullinger-digital.ch/"
+license = "offen (PLAN.md, Frage 3)"
+files = ["data/index/persons.xml", "data/index/localities.xml", "data/cmif/bullinger-korpus-cmif.xml"]
+
+[qlever]
+title = "Bestandsgraph (Agentic Historian): Dodis, Königsfelden, SSRQ, Musiklexikon, Human Lineage"
+endpoint = "https://tei.dh.unibe.ch/sparql/"
+license = "Bestände je eigene Lizenz; Human-Lineage-Schicht CC BY-SA 4.0"

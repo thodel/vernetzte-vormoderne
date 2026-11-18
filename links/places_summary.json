@@ -1,0 +1,18 @@
+{
+ "records": 30593,
+ "joint": 30011,
+ "joint_several_sources": 169,
+ "edges": {
+  "möglich": 3737,
+  "wahrscheinlich": 1512,
+  "Konflikt": 1
+ },
+ "steps": {
+  "sicher": 582,
+  "Konflikt": 14,
+  "kandidat wahrscheinlich": 121,
+  "kandidat möglich": 333,
+  "möglich": 3756,
+  "wahrscheinlich": 1720
+ }
+}

@@ -1,0 +1,58 @@
+:root {
+  --bg: #fbfaf7; --fg: #1d1c1a; --muted: #6b665d; --line: #e3ded4; --card: #ffffff; --accent: #8a3b12;
+  --ssrq: #8a3b12; --kf: #2f6f4f; --sg: #2b5c8a; --thun: #7a4f9a; --bullinger: #b0841f; --multi: #1d1c1a;
+  --sicher: #2f6f4f; --wahrscheinlich: #b0841f; --moeglich: #8d8577; --konflikt: #a32b2b;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #171614; --fg: #ece8e0; --muted: #a49d90; --line: #34312c; --card: #201f1c; --accent: #e08a5a;
+    --ssrq: #e08a5a; --kf: #6fbf95; --sg: #79a9d8; --thun: #b994d6; --bullinger: #e0b85a; --multi: #ece8e0;
+    --sicher: #6fbf95; --wahrscheinlich: #e0b85a; --moeglich: #a49d90; --konflikt: #e07a7a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #171614; --fg: #ece8e0; --muted: #a49d90; --line: #34312c; --card: #201f1c; --accent: #e08a5a;
+  --ssrq: #e08a5a; --kf: #6fbf95; --sg: #79a9d8; --thun: #b994d6; --bullinger: #e0b85a; --multi: #ece8e0;
+  --sicher: #6fbf95; --wahrscheinlich: #e0b85a; --moeglich: #a49d90; --konflikt: #e07a7a; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 "Source Serif 4", Georgia, serif; }
+header, main, footer { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+header { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: baseline; padding-top: 20px;
+  border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+header h1 { font-size: 1.25rem; margin: 0; }
+header h1 a { color: inherit; text-decoration: none; }
+nav a { margin-right: 14px; color: var(--accent); text-decoration: none; font-family: "Source Sans 3", system-ui, sans-serif; }
+nav a[aria-current] { font-weight: 700; }
+a { color: var(--accent); }
+.muted, .small { color: var(--muted); }
+.small { font-size: .875rem; }
+.sans { font-family: "Source Sans 3", system-ui, sans-serif; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 16px 0; }
+.tile { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; }
+.tile b { display: block; font-size: 1.35rem; font-family: "Source Sans 3", system-ui, sans-serif; }
+.tile span { color: var(--muted); font-size: .85rem; }
+input[type=search] { width: 100%; font: inherit; padding: 10px 12px; border: 1px solid var(--line);
+  border-radius: 6px; background: var(--card); color: var(--fg); }
+.filters { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 8px 0 14px; font-family: "Source Sans 3", system-ui, sans-serif; font-size: .9rem; }
+.results { list-style: none; padding: 0; margin: 0; }
+.results li { padding: 8px 0; border-bottom: 1px solid var(--line); }
+.chip { display: inline-block; font: 600 .72rem/1.6 "Source Sans 3", system-ui, sans-serif; padding: 0 6px;
+  border-radius: 3px; color: var(--bg); margin-right: 3px; vertical-align: 1px; }
+.chip.ssrq { background: var(--ssrq); } .chip.kf { background: var(--kf); } .chip.sg { background: var(--sg); }
+.chip.thun { background: var(--thun); } .chip.bullinger { background: var(--bullinger); }
+.grade { font: 600 .78rem "Source Sans 3", system-ui, sans-serif; }
+.grade.sicher { color: var(--sicher); } .grade.wahrscheinlich { color: var(--wahrscheinlich); }
+.grade.möglich { color: var(--moeglich); } .grade.Konflikt { color: var(--konflikt); }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 12px 14px; margin: 12px 0; }
+.bio { font-size: 1.05rem; }
+.bio .tag { font: 600 .7rem "Source Sans 3", system-ui, sans-serif; color: var(--muted); }
+.note { border-left: 3px solid var(--line); padding-left: 10px; color: var(--muted); font-size: .9rem; }
+table { border-collapse: collapse; width: 100%; font-size: .92rem; }
+th, td { text-align: left; padding: 5px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+#map { height: calc(100vh - 170px); min-height: 420px; border: 1px solid var(--line); border-radius: 6px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 10px 0; font: .9rem "Source Sans 3", system-ui, sans-serif; }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; vertical-align: 0; }
+footer { margin-top: 40px; padding: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
+@media (max-width: 600px) { body { font-size: 15px; } #map { height: 70vh; } }
