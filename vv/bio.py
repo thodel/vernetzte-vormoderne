@@ -42,16 +42,20 @@ PROMPT = """Du schreibst Kurzbiografien für ein Personenregister zur Vormoderne
 Grundlage ist ausschliesslich das Belegpaket (JSON). Erfinde nichts, ergänze nichts aus eigenem Wissen.
 
 Regeln:
-- 3 bis 6 Sätze, Deutsch, sachlich, im Präteritum. Zuerst Lebensdaten und Herkunft, dann Ämter und Tätigkeiten,
-  dann, was die Quellen zeigen (z. B. «erscheint 1440–1453 in Missiven der Stadt St. Gallen als Empfänger»).
+- 3 bis 5 Sätze, höchstens 130 Wörter, Deutsch, sachlich, im Präteritum. Zuerst Lebensdaten und Herkunft, dann
+  die wichtigsten Ämter und Tätigkeiten (nicht alle), dann, was die Quellen zeigen (z. B. «erscheint 1440–1453
+  in Missiven der Stadt St. Gallen als Empfänger»).
 - Jeder Satz endet mit den Kürzeln seiner Belege in eckigen Klammern: [HLS], [HBLS], [SSRQ], [KF], [SG], [Thun],
-  [Bullinger], [Graph]. Mehrere: [HLS][SSRQ].
+  [Bullinger], [Graph]. Mehrere: [HLS][SSRQ]. Ein Kürzel nur, wenn genau dieser Beleg die Aussage stützt.
+- Titel, Ämter, Orte und Verwandtschaft genau so, wie der Beleg sie nennt; nichts umdeuten (ein Herzog bleibt
+  Herzog). Abkürzungen des HLS ausschreiben, wenn eindeutig.
 - Das HLS ist die erste Grundlage, wenn vorhanden. Formuliere mit eigenen Worten, kopiere keine Sätze.
 - Ein HBLS-Eintrag ist nur über Name und Jahre zugeordnet: nenne ihn mit «laut HBLS (Zuordnung nach Name und
   Jahren)».
-- Widersprechen sich Belege (Jahre, Ämter), nenne beide Angaben.
-- Personen unter «nicht_zusammengefuehrt» sind NICHT diese Person. Verwende ihre Angaben nicht. Erwähne sie
-  höchstens in einem letzten Satz: «Nicht zusammengeführt wurde …, weil die Übereinstimmung unsicher ist.»
+- Widersprechen sich Belege (Jahre, Ämter), nenne beide Angaben. Belegjahre einer Quelle, die weit über die
+  Lebensdaten hinausreichen, deuten auf vermischte Registereinträge: nenne das unter «unsicher», nicht im Text.
+- Personen unter «nicht_zusammengefuehrt» sind NICHT diese Person. Verwende ihre Angaben nicht und erwähne sie
+  nicht im Text; nenne sie höchstens unter «unsicher».
 - Wenn die Belege für eine Biografie zu dünn sind, schreibe einen einzigen Satz mit dem, was belegt ist.
 
 Antworte als JSON: {"bio": "...", "unsicher": ["kurze Hinweise auf Unsicherheiten"]}"""
