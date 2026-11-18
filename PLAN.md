@@ -27,9 +27,9 @@ zusammengeführt, auf einer gemeinsamen Karte gezeigt und mit Kurzbiografien ver
 - **Seite:** Suche, Personenseiten, Karte.
 
 Stand der ersten Läufe:
-- **Gemeinsamer Index:** 64 707 Personen, 311 davon in mehreren Quellen. Das ist der Stand vor dem
-  vollen Metagrid-Lauf.
-- **Kanten «möglicherweise dieselbe Person»:** 3 747.
+- **Gemeinsamer Index:** 64 611 Personen, 372 davon in mehreren Quellen. Metagrid ist für die 3 040
+  meistbelegten Ids abgefragt (2 017 mit Konkordanz) und hat 99 Zusammenführungen beigetragen.
+- **Kanten «möglicherweise dieselbe Person»:** 4 132; Konflikte (verweigerte Zusammenführungen): 21.
 - **Karte:** 8 711 Orte.
 
 **M1 — Konkordanzen vollständig.**
