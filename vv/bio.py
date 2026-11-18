@@ -161,7 +161,7 @@ def slot():
 
 
 def ask(pack: dict) -> dict:
-    base = (env("VV_LLM_BASE_URL") or env("GPUSTACK_BASE_URL")).rstrip("/")
+    base = (env("VV_LLM_BASE_URL") or env("GPUSTACK_BASE_URL") or "https://gpustack.unibe.ch/v1").rstrip("/")
     key = env("VV_LLM_API_KEY") or env("GPUSTACK_API_KEY")
     model = env("VV_LLM_MODEL", "gpt-oss-120b")
     text = json.dumps(pack, ensure_ascii=False, sort_keys=True)
