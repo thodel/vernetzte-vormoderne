@@ -90,7 +90,7 @@ async function personPage() {
   if (!p) { $("#person").innerHTML = `<p>Person ${esc(jid)} nicht gefunden.</p>`; return; }
   document.title = `${p.label} · Vernetzte Vormoderne`;
   const ids = Object.entries(p.ids).map(([k, v]) => ID_URL[k] ? `<a href="${ID_URL[k](v)}">${k.toUpperCase()} ${esc(v)}</a>` : `${k} ${esc(v)}`).join(" · ");
-  let h = `<h2>${esc(p.label)} <span class="muted">${years(p.years)}</span></h2><p>${chips(p.sources)}</p><p class="small sans">${ids}</p>`;
+  let h = `<p class="kicker">Person</p><h1>${esc(p.label)} <span class="muted">${years(p.years)}</span></h1><p>${chips(p.sources)}</p><p class="small sans">${ids}</p>`;
   if (p.bio && p.bio.bio) {
     const hlsNote = p.bio.hls ? ` Grundlage u. a.: <a href="${esc(p.bio.hls.url)}">HLS-Artikel</a> von ${esc(p.bio.hls.author || "?")} (Version ${esc(p.bio.hls.version || "?")}), ${esc(p.bio.hls.licence)}.` : "";
     h += `<div class="card"><div class="bio">${bioHtml(p.bio.bio)}</div>

@@ -1,9 +1,20 @@
 <!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css"><title>Vernetzte Vormoderne</title></head>
-<body data-page="start"><header><h1><a href="index.html">Vernetzte Vormoderne</a></h1><nav><a href="index.html" aria-current="page">Personen</a><a href="karte.html">Karte</a><a href="https://github.com/thodel/vernetzte-vormoderne">Daten und Code</a></nav></header>
-<main>
-<p>Ein gemeinsamer Index der Personen und Orte aus Rechtsquellen, Klosterakten und Briefwechseln der Schweiz, etwa 1200–1800. Zusammengeführt wird nur, was sicher dieselbe Person ist: gleiche Normdaten-Id oder eine Konkordanz (Metagrid, Bestandsgraph). Alles Unsichere bleibt getrennt und wird als mögliche Entsprechung gezeigt.</p>
+<body data-page="start"><header class="top">
+  <div class="wrap row">
+    <a class="brand" href="index.html">Vernetzte <span class="accent">Vormoderne</span></a>
+    <span class="tagline">Personen und Orte der Schweiz, etwa 1200–1800</span>
+    <span class="badge-alpha">Demonstrator</span>
+  </div>
+  <div class="band"><nav class="wrap">
+    <a href="index.html" aria-current="page">Personen</a>
+    <a href="karte.html">Karte</a>
+    <a href="https://github.com/thodel/vernetzte-vormoderne">Daten und Code</a>
+  </nav></div>
+</header>
+<main class="wrap">
+<p class="kicker">Gemeinsamer Index</p><h1>Personen und Orte</h1>
+<p class="lead">Ein gemeinsamer Index der Personen und Orte aus Rechtsquellen, Klosterakten und Briefwechseln der Schweiz, etwa 1200–1800. Zusammengeführt wird nur, was sicher dieselbe Person ist: gleiche Normdaten-Id oder eine Konkordanz (Metagrid, Bestandsgraph). Alles Unsichere bleibt getrennt und wird als mögliche Entsprechung gezeigt.</p>
 <div id="tiles" class="tiles"></div>
 <label for="q" class="sans">Person suchen</label>
 <input id="q" type="search" placeholder="z. B. Landenberg, Melanchthon, Schopfer" autocomplete="off">
@@ -11,5 +22,5 @@
 <p id="count" class="small"></p>
 <ul id="results" class="results"></ul>
 <h3>Quellen</h3><ul id="sources" class="small"></ul>
-</main><footer>Code MIT · Verknüpfungen CC0 · Biografien CC BY-SA 4.0 (sie bauen auf dem HLS auf) · Angaben der Quellen unter deren Lizenzen (siehe Startseite). Personen, die nur «wahrscheinlich» oder «möglich» dieselben sind, werden nicht zusammengeführt.</footer>
+</main><footer class="foot"><div class="wrap"><p>Code MIT · Verknüpfungen CC0 · Biografien CC BY-SA 4.0 (sie bauen auf dem HLS auf) · Angaben der Quellen unter deren Lizenzen (siehe Startseite). Personen, die nur «wahrscheinlich» oder «möglich» dieselben sind, werden nicht zusammengeführt.</p></div></footer>
 <script src="app.js"></script></body></html>
