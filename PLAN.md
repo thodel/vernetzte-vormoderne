@@ -55,8 +55,9 @@ Dazu eine Konkordanz der Dokumente (thodel/ssrq_print#11) und Missiven ↔ Stüc
 
 ## Offene Fragen
 
-1. **Sichtbarkeit des Repos und der Seite.** Das Repo ist vorerst privat. Die Quellen sind offen, die
-   St. Galler Register aber unter CC BY-NC 4.0.
+1. ~~Sichtbarkeit~~ Entschieden am 19.11.2026: Repo und Seite sind öffentlich
+   (https://thodel.github.io/vernetzte-vormoderne/). Die St. Galler Register stehen unter CC BY-NC 4.0;
+   das ist im README und in der Fusszeile vermerkt.
 2. **SSRQ-Superregister.** Personen aus verschiedenen Bänden bleiben getrennte Cluster, solange
    `ssrq_print` sie nicht bündelt. Sollen hier SSRQ-Datensätze untereinander als mögliche Entsprechungen
    verglichen werden?

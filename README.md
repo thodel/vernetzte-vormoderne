@@ -1,5 +1,7 @@
 # Vernetzte Vormoderne
 
+Seite: https://thodel.github.io/vernetzte-vormoderne/
+
 Ein gemeinsamer Index der Personen und Orte aus Rechtsquellen, Klosterakten und Briefwechseln der
 Schweiz, etwa 1200–1800. Dazu kommen eine gemeinsame Karte und Kurzbiografien. Das Repo ist das
 Gegenstück zu [vernetzte-schweiz](https://github.com/thodel/vernetzte-schweiz) für die Vormoderne.
